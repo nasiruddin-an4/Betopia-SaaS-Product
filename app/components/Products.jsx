@@ -121,18 +121,16 @@ const Products = () => {
                     {PRODUCTS.map((product, index) => (
                         <div
                             key={product.id}
-                            className="sticky top-32 h-[65vh] w-full flex items-center justify-center px-4 md:px-0"
+                            className="sticky top-32 h-[65vh] md:h-[70vh] w-full flex items-center justify-center px-4 md:px-0"
                             style={{ zIndex: index + 1, marginBottom: index === PRODUCTS.length - 1 ? '0' : '15vh' }}
                         >
                             <div className="w-full max-w-7xl h-full bg-white md:rounded-[2.5rem] rounded-[2rem] border border-slate-200 overflow-hidden flex flex-col md:flex-row transition-all duration-500">
-                                <div className="flex-1 p-8 md:p-12 lg:p-16 flex flex-col justify-center overflow-y-auto custom-scrollbar">
+                                <div className="flex-1 p-8 md:p-12 lg:p-16 flex flex-col justify-center custom-scrollbar">
                                     <div className="mb-6">
-                                        <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 mb-6">
-                                            {React.cloneElement(PRODUCT_ICONS[product.id], { className: 'w-5 h-5' })}
-                                        </div>
+
                                         <h3 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-2 tracking-wide leading-none">{product.name.replace('Betopia ', '')}</h3>
-                                        <p className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.15em] mb-4">{product.tagline}</p>
-                                        <p className="text-slate-400 text-base lg:text-lg leading-snug mb-8 max-w-md">
+                                        <p className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.15em] mb-3">{product.tagline}</p>
+                                        <p className="text-slate-400 text-base lg:text-lg leading-snug mb-2 max-w-md">
                                             {product.overview.substring(0, 140)}...
                                         </p>
                                     </div>
@@ -140,7 +138,7 @@ const Products = () => {
                                         {product.features.slice(0, 3).map((feature, fIndex) => (
                                             <div
                                                 key={fIndex}
-                                                className="group flex items-center justify-between rounded-lg py-2 transition-all"
+                                                className="group flex items-center justify-between py-1 transition-all"
                                             >
                                                 <span className="text-slate-800 text-md font-semibold tracking-tight">
                                                     {feature}
@@ -150,10 +148,10 @@ const Products = () => {
                                             </div>
                                         ))}
                                     </div>
-                                    <div className="mt-10">
+                                    <div className="mt-4">
                                         <Link
                                             href={`/products/${product.id}`}
-                                            className="group flex items-center text-slate-900 font-bold text-[10px] uppercase tracking-[0.2em] hover:text-blue-600 transition-colors"
+                                            className="group flex items-center text-blue-700 font-bold text-[10px] uppercase tracking-[0.2em] hover:text-blue-900 transition-colors"
                                         >
                                             TECHNICAL OVERVIEW <ArrowRight className="ml-2 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                                         </Link>
@@ -171,9 +169,6 @@ const Products = () => {
                                             <div className="w-full h-px bg-white rotate-[15deg]"></div>
                                             <div className="w-full h-px bg-white -rotate-[15deg]"></div>
                                         </div>
-                                    </div>
-                                    <div className="absolute bottom-10 right-10 text-white/[0.06] font-black text-7xl select-none uppercase tracking-tighter">
-                                        BETOPIA
                                     </div>
                                 </div>
                             </div>
