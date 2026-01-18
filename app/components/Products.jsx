@@ -2,94 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, ChevronRight, Shield, Zap, Database, Globe, Box, Cpu, GraduationCap, HeartPulse, Phone, Clock, BookOpen, Monitor, School, Layers, Mail, Lock } from 'lucide-react';
+import { ArrowRight, ChevronRight, Shield, Zap, Database, Globe, Box, Cpu, GraduationCap, HeartPulse, Phone, Clock, BookOpen, Monitor, School, Layers, Mail, Lock, Cloud } from 'lucide-react';
+import { PRODUCTS } from '../data/products';
 
-const PRODUCTS = [
-    {
-        id: 'agentic-ai',
-        name: 'Betopia Agentic AI',
-        tagline: 'Autonomous Workforce',
-        overview: 'Deploys intelligent agents that autonomously execute complex workflows, reducing operational overhead by 70%. Moves beyond simple chatbots to action-oriented problem solving.',
-        features: ['Autonomous Task Execution', 'Multi-Agent Collaboration', 'Self-Correcting Workflows', 'Enterprise Security Wrapper']
-    },
-    {
-        id: 'tolkora-ai',
-        name: 'Tolkora AI',
-        tagline: 'Hyper-Personalized Marketing',
-        overview: 'An AI engine that generates thousands of personalized marketing assets instantly. From ad copy to video scripts, Tolkora scales your brand voice with mathematical precision.',
-        features: ['Generative Ad Copy', 'Dynamic Creative Optimization', 'Cross-Platform Formatting', 'Brand Voice Calibration']
-    },
-    {
-        id: 'smart-ivr',
-        name: 'Smart IVR',
-        tagline: 'Intelligent Voice Response',
-        overview: 'Next-generation IVR system powered by natural language processing. Understands customer intent, routes calls intelligently, and resolves simple queries without human intervention.',
-        features: ['Natural Language Understanding', 'Seamless Call Routing', 'Voice Biometrics', 'Real-time Sentiment Analysis']
-    },
-    {
-        id: 'business-24x7',
-        name: 'Betopia Business 24x7',
-        tagline: 'Business Continuity Wrapper',
-        overview: 'Ensure your business never sleeps with our 24/7 AI-powered monitoring and automated failover systems. Guarantees 99.99% uptime for critical business operations.',
-        features: ['Automated Failover', 'Real-time Anomaly Detection', 'Predictive Maintenance', 'Always-on Availability']
-    },
-    {
-        id: 'edu-os',
-        name: 'Betopia EduOS',
-        tagline: 'Institutional Management',
-        overview: 'A complete operating system for modern educational institutions. Manages everything from admissions and tuition to LMS and alumni networks in one unified cloud dashboard.',
-        features: ['Smart Admissions Portal', 'Integrated LMS', 'Auto-Grading AI', 'Financial Analytics']
-    },
-    {
-        id: 'care-os',
-        name: 'Betopia CareOS',
-        tagline: 'Healthcare Operations',
-        overview: 'Streamlines hospital and clinic operations with intelligent scheduling, patient record management, and telemedicine infrastructure. Built for HIPAA and GDPR compliance.',
-        features: ['Telemedicine Suite', 'Electronic Health Records', 'Smart Scheduling', 'Inventory AI']
-    },
-    {
-        id: 'betopia-lms',
-        name: 'Betopia LMS',
-        tagline: 'Corporate Learning Suite',
-        overview: 'A scalable Learning Management System designed for enterprise workforce development. Personalized learning paths, skill gap analysis, and gamified engagement modules.',
-        features: ['Skill Gap Analysis', 'Personalized Learning Paths', 'Gamification Engine', 'Compliance Training']
-    },
-    {
-        id: 'virtual-gate',
-        name: 'Virtual Gate',
-        tagline: 'Visitor Management System',
-        overview: 'Secure, contactless visitor management for modern facilities. Features facial recognition, digital badges, and automated security screenings for seamless entry experiences.',
-        features: ['Facial Recognition Entry', 'Digital Visitor Badges', 'Security Screening Integration', 'Real-time occupancy tracking']
-    },
-    {
-        id: 'smart-class',
-        name: 'Betopia SmartClass',
-        tagline: 'Interactive Learning Environment',
-        overview: 'Transforms traditional classrooms into interactive digital hubs. Includes smart whiteboarding, real-time student engagement tools, and hybrid learning capabilities.',
-        features: ['Interactive Whiteboarding', 'Hybrid Learning Support', 'Real-time Engagement Metrics', 'Lecture Recording & Transcription']
-    },
-    {
-        id: 'betopia-stitch',
-        name: 'Betopia Stitch',
-        tagline: 'API Integration Hub',
-        overview: 'A low-code integration platform that "stitches" together your disparate SaaS applications. Create unified data flows between CRM, ERP, and custom tooling without complex code.',
-        features: ['Low-code Visual Builder', 'Pre-built Connectors', 'Real-time Data Sync', 'API Lifecycle Management']
-    },
-    {
-        id: 'mail-campaign',
-        name: 'Betopia Mail Campaign',
-        tagline: 'Intelligent Email Operations',
-        overview: 'High-volume email delivery infrastructure optimized for transactional and marketing communications. Features AI-driven deliverability optimization and dynamic content insertion.',
-        features: ['AI Deliverability Optimization', 'Dynamic Content Personalization', 'A/B Testing Automation', 'High-volume Sending Infrastructure']
-    },
-    {
-        id: 'count-trust',
-        name: 'Betopia Count Trust',
-        tagline: 'Financial Integrity System',
-        overview: 'Blockchain-backed auditing and financial reconciliation tool. Ensures absolute integrity of financial records with immutable ledgers and automated discrepancy detection.',
-        features: ['Blockchain-backed Ledger', 'Automated Reconciliation', 'Fraud Detection Algorithms', 'Compliance Reporting']
-    }
-];
+
 
 const PRODUCT_ICONS = {
     'agentic-ai': <Cpu />,
@@ -103,7 +19,8 @@ const PRODUCT_ICONS = {
     'smart-class': <School />,
     'betopia-stitch': <Layers />,
     'mail-campaign': <Mail />,
-    'count-trust': <Lock />
+    'count-trust': <Lock />,
+    'cloud-managed-services': <Cloud />
 };
 
 const Products = () => {
@@ -153,7 +70,7 @@ const Products = () => {
                                             href={`/products/${product.id}`}
                                             className="group flex items-center text-blue-700 font-bold text-[10px] uppercase tracking-[0.2em] hover:text-blue-900 transition-colors"
                                         >
-                                            TECHNICAL OVERVIEW <ArrowRight className="ml-2 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                                            Explore More <ArrowRight className="ml-2 w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                                         </Link>
                                     </div>
                                 </div>
