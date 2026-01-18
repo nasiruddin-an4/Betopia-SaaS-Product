@@ -7,11 +7,11 @@ import heroData from '../data/hero.json';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-[95vh] flex flex-col justify-center items-center overflow-hidden hero-panel-bg pt-32 pb-20">
+        <section className="relative min-h-[95vh] flex flex-col justify-center items-center overflow-hidden bg-[#f5f5f7] pt-32 pb-20">
             <div className="container mx-auto px-4 sm:px-0 relative z-10 flex flex-col items-center text-center">
 
                 {/* New Pill Badge */}
-                <div className="inline-flex items-center bg-white p-1.5 pr-6 rounded-full border border-slate-200 shadow-sm mb-3 hover:shadow-md transition-shadow cursor-default">
+                <div className="inline-flex items-center bg-white p-1.5 pr-6 rounded-full border border-slate-200 shadow-sm mb-8 hover:shadow-md transition-shadow cursor-default">
                     <span className="bg-[#ccf381] text-slate-900 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mr-3">
                         {heroData.badge.label}
                     </span>
