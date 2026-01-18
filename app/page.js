@@ -14,9 +14,9 @@ export default function Home() {
       <Hero />
       <MetricCounter />
       <Products />
-      <AppsBuilt />
       <CostEstimator />
       <ComparePlans />
+      <AppsBuilt />
       <Testimonial />
       <Faq />
       <CTA />

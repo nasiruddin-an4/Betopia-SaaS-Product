@@ -115,7 +115,7 @@ const Testimonial = () => {
                                 key={i}
                                 className={`${isMobile ? 'w-full px-0' : 'w-1/3 px-3'} shrink-0`}
                             >
-                                <div className="bg-slate-50 p-10 rounded-xl flex flex-col h-full border border-slate-100/50 hover:bg-white hover:shadow-xl transition-all duration-300">
+                                <div className="bg-slate-50 p-10 rounded-xl flex flex-col h-full border border-slate-100/50 hover:bg-white transition-all duration-300">
                                     <div className="mb-8">
                                         <Quote className="w-12 h-12 text-slate-200 fill-slate-200" />
                                     </div>
