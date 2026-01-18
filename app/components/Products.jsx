@@ -121,7 +121,7 @@ const Products = () => {
                     {PRODUCTS.map((product, index) => (
                         <div
                             key={product.id}
-                            className="sticky top-32 h-[65vh] md:h-[70vh] w-full flex items-center justify-center px-4 md:px-0"
+                            className="sticky top-32 h-[65vh] w-full flex items-center justify-center px-4 md:px-0"
                             style={{ zIndex: index + 1, marginBottom: index === PRODUCTS.length - 1 ? '0' : '15vh' }}
                         >
                             <div className="w-full max-w-7xl h-full bg-white md:rounded-[2.5rem] rounded-[2rem] border border-slate-200 overflow-hidden flex flex-col md:flex-row transition-all duration-500">
